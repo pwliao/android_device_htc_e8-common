@@ -31,25 +31,25 @@
 -include device/htc/msm8974-common/BoardConfigCommon.mk
 
 # Assertions
-TARGET_BOARD_INFO_FILE ?= device/htc/m8-common/board-info.txt
+TARGET_BOARD_INFO_FILE ?= device/htc/e8-common/board-info.txt
 
 # Includes
-TARGET_SPECIFIC_HEADER_PATH += device/htc/m8-common/include
+TARGET_SPECIFIC_HEADER_PATH += device/htc/e8-common/include
 
 # Camera
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE += /system/bin/mediaserver=22
-TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY := libcamera_parameters_ext
+TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY := libcamera_parameters_ext_e8
 USE_DEVICE_SPECIFIC_CAMERA := true
 
 # NFC
 BOARD_NFC_HAL_SUFFIX := msm8974
 
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := device/htc/m8-common/releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := device/htc/e8-common/releasetools
 
 # Shipping API level (for CTS backward compatibility)
 PRODUCT_SHIPPING_API_LEVEL := 19
 
 # Inherit from the proprietary version
--include vendor/htc/m8-common/BoardConfigVendor.mk
+-include vendor/htc/e8-common/BoardConfigVendor.mk
